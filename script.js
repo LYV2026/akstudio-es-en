@@ -61,7 +61,7 @@ if (heroFrame && heroVideo) {
     window.setTimeout(() => {
       heroFrame.classList.add('video-ready');
       heroVideo.play().catch(() => {});
-    }, 450);
+    }, 500);
   };
 
   heroVideo.addEventListener('canplay', showVideo, { once: true });
