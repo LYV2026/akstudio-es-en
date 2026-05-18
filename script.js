@@ -1,35 +1,57 @@
-const toggle = document.querySelector('.menu-toggle');
+const header = document.querySelector('.site-header');
+const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
+const navLinks = Array.from(document.querySelectorAll('.site-nav a'));
+const sections = Array.from(document.querySelectorAll('main section[id]'));
 
-if (toggle && nav) {
-  toggle.addEventListener('click', () => {
-    const expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', String(!expanded));
+function updateHeaderOnScroll() {
+  if (!header) return;
+  header.classList.toggle('scrolled', window.scrollY > 36);
+}
+
+window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+updateHeaderOnScroll();
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', String(!isExpanded));
     nav.classList.toggle('open');
   });
 
-  nav.querySelectorAll('a').forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener('click', () => {
       nav.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
 }
 
-const observer = new IntersectionObserver(
+const revealObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('visible');
     });
   },
   { threshold: 0.2 }
 );
 
-document.querySelectorAll('.reveal').forEach((item) => observer.observe(item));
+document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+
+const activeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+    });
+  },
+  { threshold: 0.55 }
+);
+
+sections.forEach((section) => activeObserver.observe(section));
 
 const yearEl = document.getElementById('year');
-if (yearEl) {
-  yearEl.textContent = new Date().getFullYear();
-}
+if (yearEl) yearEl.textContent = String(new Date().getFullYear());
