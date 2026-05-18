@@ -27,6 +27,7 @@
   </head>
   <body>
     <header class="site-header" id="top">
+      <div class="header-overlay"></div>
       <div class="container nav-wrap">
         <a href="#top" class="brand" aria-label="AK Studio home">
           <img src="assets/akstudio-logo-transparent.png" alt="AK Studio Arquitectos logo" />
@@ -47,20 +48,25 @@
 
     <main>
       <section class="hero" id="hero" aria-label="Hero">
-        <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-bg.jpg">
-          <source src="assets/hero-video.mp4" type="video/mp4" />
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content container">
-          <p class="eyebrow">AK Studio Arquitectos · Costa Rica</p>
-          <h1>Boutique Architecture for Tropical Living &amp; Investment in Costa Rica</h1>
-          <p>
-            We design modern tropical homes, boutique villas, and investment-oriented properties created to be lived,
-            remembered, and built with purpose.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="#contact">Start Your Project</a>
-            <a class="btn btn-outline" href="#services">Explore Our Services</a>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow reveal reveal-delay-1">AK Studio Arquitectos · Costa Rica</p>
+            <h1 class="reveal reveal-delay-2">Boutique Architecture for Tropical Living &amp; Investment in Costa Rica</h1>
+            <p class="reveal reveal-delay-3">
+              We design modern tropical homes, boutique villas, and investment-oriented properties created to be lived,
+              remembered, and built with purpose.
+            </p>
+            <div class="hero-actions reveal reveal-delay-3">
+              <a class="btn btn-gold" href="#contact">Start Your Project</a>
+              <a class="btn btn-outline" href="#services">Explore Our Services</a>
+            </div>
+          </div>
+
+          <div class="hero-media-frame reveal reveal-delay-2" aria-label="Hero visual">
+            <img class="hero-poster" src="assets/hero-bg.jpg" alt="AK Studio tropical architecture hero" />
+            <video class="hero-video" muted loop playsinline poster="assets/hero-bg.jpg">
+              <source src="assets/hero-video.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>
@@ -91,31 +97,11 @@
             </p>
           </div>
           <div class="services-track">
-            <article class="service-card reveal">
-              <span>01</span>
-              <h3>Luxury Tropical Homes</h3>
-              <p>Custom residential design focused on effortless indoor-outdoor living and premium spatial flow.</p>
-            </article>
-            <article class="service-card reveal">
-              <span>02</span>
-              <h3>Boutique Villas &amp; Airbnb Properties</h3>
-              <p>Hospitality-driven concepts with memorable guest experience and strong rental market positioning.</p>
-            </article>
-            <article class="service-card reveal">
-              <span>03</span>
-              <h3>Concept Design &amp; Visualization</h3>
-              <p>Early-stage concept strategy, massing, and visual direction for aligned decisions and momentum.</p>
-            </article>
-            <article class="service-card reveal">
-              <span>04</span>
-              <h3>Permits, Documentation &amp; Build Planning</h3>
-              <p>Technical documentation and project clarity to support approvals, consultants, and construction teams.</p>
-            </article>
-            <article class="service-card reveal">
-              <span>05</span>
-              <h3>Investment-Oriented Property Strategy</h3>
-              <p>Design decisions shaped by occupancy goals, long-term value, and investment potential.</p>
-            </article>
+            <article class="service-card reveal"><span>01</span><h3>Luxury Tropical Homes</h3><p>Custom residential design focused on effortless indoor-outdoor living and premium spatial flow.</p></article>
+            <article class="service-card reveal"><span>02</span><h3>Boutique Villas &amp; Airbnb Properties</h3><p>Hospitality-driven concepts with memorable guest experience and strong rental market positioning.</p></article>
+            <article class="service-card reveal"><span>03</span><h3>Concept Design &amp; Visualization</h3><p>Early-stage concept strategy, massing, and visual direction for aligned decisions and momentum.</p></article>
+            <article class="service-card reveal"><span>04</span><h3>Permits, Documentation &amp; Build Planning</h3><p>Technical documentation and project clarity to support approvals, consultants, and construction teams.</p></article>
+            <article class="service-card reveal"><span>05</span><h3>Investment-Oriented Property Strategy</h3><p>Design decisions shaped by occupancy goals, long-term value, and investment potential.</p></article>
           </div>
         </div>
       </section>
@@ -129,7 +115,6 @@
             <article class="project-card reveal"><span class="project-tag">Hospitality</span><h3>Boutique Airbnb Residence</h3></article>
             <article class="project-card reveal"><span class="project-tag">Investment</span><h3>Coastal Investment Home</h3></article>
           </div>
-          <p class="section-note">Project visuals are placeholders using current brand assets and can be replaced with final studio photography.</p>
         </div>
       </section>
 
@@ -151,7 +136,7 @@
         <div class="container">
           <p class="eyebrow">Our Process</p>
           <h2>Professional clarity for clients building remotely in Costa Rica.</h2>
-          <p class="section-note">We emphasize transparent communication, local knowledge, and rigorous documentation from first sketch to build support.</p>
+          <div class="process-media-frame reveal" aria-hidden="true"></div>
           <div class="timeline">
             <article class="timeline-step reveal"><span>01</span><h3>Discovery &amp; Site Vision</h3></article>
             <article class="timeline-step reveal"><span>02</span><h3>Land / Context Review</h3></article>
@@ -163,21 +148,21 @@
         </div>
       </section>
 
-      <section id="contact" class="section section-padding cinematic contact reveal">
-        <div class="container contact-content">
-          <p class="eyebrow">Contact</p>
-          <h2>Ready to design your Costa Rica project?</h2>
-          <p>
-            Whether you are planning a private residence, boutique villa, or Airbnb investment property, AK Studio can
-            help you shape the vision from concept to build-ready design.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-gold" href="https://wa.me/50600000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-            <a class="btn btn-outline" href="mailto:hello@akstudio.es">Email</a>
+      <section id="contact" class="section section-padding contact reveal">
+        <div class="container contact-layout">
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2>Ready to design your Costa Rica project?</h2>
+            <p>
+              Whether you are planning a private residence, boutique villa, or Airbnb investment property, AK Studio can
+              help you shape the vision from concept to build-ready design.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-gold" href="https://wa.me/50600000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="btn btn-outline" href="mailto:hello@akstudio.es">Email</a>
+            </div>
           </div>
-          <div class="contact-placeholder">
-            <p>Contact form placeholder: name, email, phone/WhatsApp, project location, project type, message.</p>
-          </div>
+          <div class="contact-media-frame" aria-hidden="true"></div>
         </div>
       </section>
     </main>
