@@ -150,19 +150,67 @@
 
       <section id="contact" class="section section-padding contact reveal">
         <div class="container contact-layout">
-          <div class="contact-copy">
+          <div class="contact-copy reveal reveal-delay-1">
             <p class="eyebrow">Contact</p>
-            <h2>Ready to design your Costa Rica project?</h2>
+            <h2>Start Your Costa Rica Project</h2>
             <p>
-              Whether you are planning a private residence, boutique villa, or Airbnb investment property, AK Studio can
-              help you shape the vision from concept to build-ready design.
+              Tell us about your vision. Whether you are planning a private residence, boutique villa, or Airbnb investment property,
+              AK Studio can help you shape the concept into a build-ready architectural project.
             </p>
-            <div class="hero-actions">
-              <a class="btn btn-gold" href="https://wa.me/50600000000" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              <a class="btn btn-outline" href="mailto:hello@akstudio.es">Email</a>
+            <div class="hero-actions contact-actions">
+              <a class="btn btn-gold" href="mailto:info@akstudio.es">Email Us</a>
+              <a class="btn btn-outline" href="https://www.tiktok.com/@www.akstudio.es?lang=en" target="_blank" rel="noopener noreferrer">Visit TikTok</a>
             </div>
+            <p class="contact-meta">Email: <a href="mailto:info@akstudio.es">info@akstudio.es</a></p>
           </div>
-          <div class="contact-media-frame" aria-hidden="true"></div>
+
+          <form class="contact-form reveal reveal-delay-2" name="akstudio-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="akstudio-contact" />
+            <p class="hidden-field">
+              <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+            </p>
+
+            <label for="full-name">Full Name</label>
+            <input id="full-name" name="full-name" type="text" required />
+
+            <label for="email-address">Email Address</label>
+            <input id="email-address" name="email-address" type="email" required />
+
+            <label for="phone-whatsapp">Phone / WhatsApp</label>
+            <input id="phone-whatsapp" name="phone-whatsapp" type="tel" />
+
+            <label for="project-type">Project Type</label>
+            <select id="project-type" name="project-type" required>
+              <option value="">Select project type</option>
+              <option>Private Residence</option>
+              <option>Boutique Villa</option>
+              <option>Airbnb / Investment Property</option>
+              <option>Renovation / Expansion</option>
+              <option>Other</option>
+            </select>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button class="btn btn-gold" type="submit">Send Project Inquiry</button>
+            <p class="contact-note">Prefer direct contact? Email us at <a href="mailto:info@akstudio.es">info@akstudio.es</a> or message us on WhatsApp.</p>
+          </form>
+        </div>
+
+        <div class="container founders-grid reveal reveal-delay-3">
+          <article class="founder-card">
+            <h3>Leonardo Sánchez</h3>
+            <p>Co-founder / Director of Architecture &amp; Projects</p>
+            <p>Phone / WhatsApp: +506 6228-1550</p>
+            <a class="btn btn-outline" href="https://wa.me/50662281550" target="_blank" rel="noopener noreferrer">WhatsApp Leonardo</a>
+          </article>
+
+          <article class="founder-card">
+            <h3>German Sánchez</h3>
+            <p>Co-founder / Director of Design &amp; Creative Development</p>
+            <p>Phone / WhatsApp: +506 6050-0542</p>
+            <a class="btn btn-outline" href="https://wa.me/50660500542" target="_blank" rel="noopener noreferrer">WhatsApp German</a>
+          </article>
         </div>
       </section>
     </main>
